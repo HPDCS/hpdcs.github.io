@@ -54,6 +54,13 @@ title: People
         </figure>
     </div>
 
+    <div class="col-3">
+        <figure class="figure">
+          <img src="{{ "/assets/img/people/pimpini.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
+          <figcaption class="figure-caption text-left">Adriano Pimpini</figcaption>
+        </figure>
+    </div>
+
 </div>
 
 ### Past Members
@@ -66,112 +73,112 @@ title: People
           <figcaption class="figure-caption text-left">Bruno Ciciani<br/>Retired</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/disanzo.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Pierangelo Di Sanzo<br/>Tenure-Track Assistant Professor<br/>Uniroma 3</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/cingolani.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Davide Cingolani</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/ianni.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Mauro Ianni</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/conoci.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Stefano Conoci</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/silvestri.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Emiliano Silvestri</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/carna.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Stefano Carnà</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/principe.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Matteo Principe</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/piccione.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Andrea Piccione</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/bacocco.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Duilio Bacocco</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/economo.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Simone Economo</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/peluso.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Sebastiano Peluso</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/rughetti.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Diego Rughetti</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/vitali.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Roberto Vitali</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/palmieri.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Roberto Palmieri</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/romano.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Paolo Romano</figcaption>
         </figure>
     </div>
-
+    
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/nopic.png" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
