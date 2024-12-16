@@ -41,12 +41,6 @@ title: People
         </figure>
     </div>
 
-</div>
-
-### PhD Students
-
-<div class="row">
-
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/montesano.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
@@ -58,6 +52,19 @@ title: People
         <figure class="figure">
           <img src="{{ "/assets/img/people/pimpini.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
           <figcaption class="figure-caption text-left">Adriano Pimpini</figcaption>
+        </figure>
+    </div>
+
+</div>
+
+### PhD Students
+
+<div class="row">
+
+    <div class="col-3">
+        <figure class="figure">
+          <img src="{{ "/assets/img/people/bauco.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
+          <figcaption class="figure-caption text-left">Simone Bauco</figcaption>
         </figure>
     </div>
 
