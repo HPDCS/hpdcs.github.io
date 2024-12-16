@@ -56,9 +56,18 @@ $("#authorselectfirst, #authorselect").on("change", function() {
 
 <br/>
 
+<bibtex src="pubs.bib"></bibtex>
+
+<style>
+    bibtex { display: none; }
+    .searchbar { margin-left:0px;}
+    #bibtex_errors { margin-top:10px; color: red;}
+    h1.header {margin-left:8px;}
+    h1.YEAR { font-size: 17px; font-weight: bold; display: inline; margin-left:8px;}
+</style>
+
 <div class="bibtex_structure">
     <div class="group year" extra="ASC number">
-        <a href="#top" style="display: inline"><em>(Top of the page)</em></a>
         <div style="padding-bottom:10px;"></div>
         <div class="sort journal" extra="DESC string">
             <div class="templates"></div>
@@ -67,7 +76,6 @@ $("#authorselectfirst, #authorselect").on("change", function() {
 </div>
 
 <div id="bibtex_display">
-
     <div class="if bibtex_template" style="display: none;">
         <ul>
             <li>
@@ -96,19 +104,9 @@ $("#authorselectfirst, #authorselect").on("change", function() {
                     <span class="if pages"> pages <span class="pages"></span>,</span>
                     <span class="if month"><span class="month"></span>,</span>
                     <span class="if year"><span class="year"></span>.</span>
+                    <span class="if doi"><span class="doi"></span>.</span>
                     <span class="if note"><span class="note"></span>.</span>
-                    <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+"
-                       aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY">
-                        [bib]
-                    </a>
                 </div>
-                <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
-                    <div class="well">
-                        <pre><span class="bibtexraw noread"></span></pre>
-                    </div>
-                </div>
-                <div style="display:none"><span class="bibtextype"></span></div>
-                <div style="display:none"><span class="if topic"><span class="topic"></span></span></div>
             </li>
         </ul>
     </div>
