@@ -1,0 +1,48 @@
+name: Compile and Deploy Jekyll Website
+
+on:
+  push:
+    branches:
+      - deploy
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby Environment
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Compile Jekyll Artifacts
+        run: |
+          bundle install
+          JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Deploy via SFTP and Password
+        env:
+          PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+          HOST: ${{ secrets.SERVER_HOST }}
+          USERNAME: ${{ secrets.SERVER_USERNAME }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          TARGET: ${{ secrets.SERVER_TARGET_PATH }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p $PORT -H $HOST >> ~/.ssh/known_hosts
+          
+          cat <<EOF > batch.sftp
+          lcd _site
+          cd $TARGET
+          put -r *
+          EOF
+          
+          sshpass -p "$PASSWORD" sftp -P $PORT -b batch.sftp $USERNAME@$HOST
