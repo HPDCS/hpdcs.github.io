@@ -36,8 +36,4 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
           TARGET: ${{ secrets.SERVER_TARGET_PATH }}
         run: |
-          echo "lcd _site" > batch.sftp
-          echo "cd $TARGET" >> batch.sftp
-          echo "put -r *" >> batch.sftp
-          
-          sshpass -p "$PASSWORD" sftp -P $PORT $USERNAME@$HOST < batch.sftp       
+          printf "lcd _site\ncd $TARGET\nput -r *\n" | sshpass -p "$PASSWORD" sftp -oBatchMode=no -P $PORT $USERNAME@$HOST      
