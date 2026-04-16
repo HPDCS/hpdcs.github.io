@@ -36,9 +36,6 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
           TARGET: ${{ secrets.SERVER_TARGET_PATH }}
         run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -p $PORT -H $HOST >> ~/.ssh/known_hosts
-          
           cat <<EOF > batch.sftp
           lcd _site
           cd $TARGET
