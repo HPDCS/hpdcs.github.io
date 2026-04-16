@@ -36,6 +36,7 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
           TARGET: ${{ secrets.SERVER_TARGET_PATH }}
         run: |
+          ssh -v -o ConnectTimeout=5 -p $PORT $USERNAME@$HOST
           lftp -u $USERNAME,"$PASSWORD" sftp://$HOST:$PORT -e "
           set sftp:auto-confirm yes;
           mirror -R -v --delete _site/ $TARGET;
