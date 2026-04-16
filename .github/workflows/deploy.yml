@@ -45,4 +45,4 @@ jobs:
           put -r *
           EOF
           
-          sshpass -p "$PASSWORD" sftp -P $PORT -b batch.sftp $USERNAME@$HOST
+          sshpass -p "$PASSWORD" sftp -P $PORT $USERNAME@$HOST < batch.sftp       
