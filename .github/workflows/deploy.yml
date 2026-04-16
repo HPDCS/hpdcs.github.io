@@ -25,10 +25,10 @@ jobs:
           bundle install
           JEKYLL_ENV=production bundle exec jekyll build
 
-      - name: Install sshpass
-        run: sudo apt-get update && sudo apt-get install -y sshpass
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Deploy via SFTP and Password
+      - name: Deploy
         env:
           PASSWORD: ${{ secrets.SERVER_PASSWORD }}
           HOST: ${{ secrets.SERVER_HOST }}
@@ -36,4 +36,7 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
           TARGET: ${{ secrets.SERVER_TARGET_PATH }}
         run: |
-          printf "lcd _site\ncd $TARGET\nput -r *\n" | sshpass -p "$PASSWORD" sftp -oBatchMode=no -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST
+          lftp -u $USERNAME,"$PASSWORD" sftp://$HOST:$PORT -e "
+          set sftp:auto-confirm yes;
+          mirror -R -v --delete _site/ $TARGET;
+          quit"
