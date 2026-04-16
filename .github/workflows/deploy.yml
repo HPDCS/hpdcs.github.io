@@ -36,4 +36,4 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
           TARGET: ${{ secrets.SERVER_TARGET_PATH }}
         run: |
-          printf "lcd _site\ncd $TARGET\nput -r *\n" | sshpass -p "$PASSWORD" sftp -oBatchMode=no -P $PORT $USERNAME@$HOST      
+          printf "lcd _site\ncd $TARGET\nput -r *\n" | sshpass -p "$PASSWORD" sftp -oBatchMode=no -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST
