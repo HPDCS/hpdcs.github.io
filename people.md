@@ -10,7 +10,7 @@ title: People
     <div class="col-3">
         <figure class="figure">
           <img src="{{ "/assets/img/people/pellegrini.jpg" | relative_url }}" class="figure-img img-fluid rounded" alt="People">
-          <figcaption class="figure-caption text-left">Alessandro Pellegrini <br/>Tenure-Track Assistant Professor <br/>Lab Head</figcaption>
+          <figcaption class="figure-caption text-left">Alessandro Pellegrini <br/>Associate Professor <br/>Lab Head</figcaption>
         </figure>
     </div>
     

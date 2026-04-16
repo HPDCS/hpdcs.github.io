@@ -1,13 +1,12 @@
-name: Compile and Deploy Jekyll Website
+name: Compile and Archive Jekyll Website
 
 on:
   push:
     branches:
-      - deploy
       - master
 
 jobs:
-  build-and-deploy:
+  build-and-archive:
     runs-on: ubuntu-latest
     
     steps:
@@ -25,19 +24,9 @@ jobs:
           bundle install
           JEKYLL_ENV=production bundle exec jekyll build
 
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Deploy
-        env:
-          PASSWORD: ${{ secrets.SERVER_PASSWORD }}
-          HOST: ${{ secrets.SERVER_HOST }}
-          USERNAME: ${{ secrets.SERVER_USERNAME }}
-          PORT: ${{ secrets.SERVER_PORT }}
-          TARGET: ${{ secrets.SERVER_TARGET_PATH }}
-        run: |
-          ssh -v -o ConnectTimeout=5 -p $PORT $USERNAME@$HOST
-          lftp -u $USERNAME,"$PASSWORD" sftp://$HOST:$PORT -e "
-          set sftp:auto-confirm yes;
-          mirror -R -v --delete _site/ $TARGET;
-          quit"
+      - name: Upload Zipped Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-compiled-site
+          path: _site/
+          compression-level: 9
